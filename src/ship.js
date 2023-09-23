@@ -14,6 +14,7 @@ export class SHIPS {
       length: 5,
       numberOfHits: 0,
       sunk: false,
+      amountOfShips: 1,
     };
 
     this.battleship = {
@@ -21,6 +22,7 @@ export class SHIPS {
       length: 4,
       numberOfHits: 0,
       sunk: false,
+      amountOfShips: 1,
     };
 
     this.cruiser = {
@@ -28,6 +30,7 @@ export class SHIPS {
       length: 3,
       numberOfHits: 0,
       sunk: false,
+      amountOfShips: 1,
     };
 
     this.submarine = {
@@ -35,6 +38,7 @@ export class SHIPS {
       length: 3,
       numberOfHits: 0,
       sunk: false,
+      amountOfShips: 1,
     };
 
     this.destroyer = {
@@ -42,6 +46,7 @@ export class SHIPS {
       length: 2,
       numberOfHits: 0,
       sunk: false,
+      amountOfShips: 1,
     };
   }
   // Methods
@@ -67,5 +72,10 @@ export class SHIPS {
       return true;
     }
     return false;
+  }
+
+  // Update the number of ships for a specific category available
+  updateNumberOfShips(shipName) {
+    return this[shipName].amountOfShips--;
   }
 }
