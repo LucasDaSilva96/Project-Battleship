@@ -54,4 +54,18 @@ export class SHIPS {
       return (this[shipName].sunk = true);
     }
   }
+
+  // should be able to report whether or not all of the ships have been sunk.
+  isGameOver() {
+    if (
+      this.carrier.sunk === true &&
+      this.battleship.sunk === true &&
+      this.cruiser.sunk === true &&
+      this.submarine.sunk === true &&
+      this.destroyer.sunk === true
+    ) {
+      return true;
+    }
+    return false;
+  }
 }
