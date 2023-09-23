@@ -48,7 +48,7 @@ export class GAME_BOARD {
   }
 
   // Function to attack a position on the board
-  attack(row, col) {
+  receiveAttack(row, col) {
     if (this.board[row][col] === "empty") {
       this.board[row][col] = "miss";
       console.log("Miss");
@@ -65,6 +65,4 @@ export class GAME_BOARD {
       return "You sank a ship!";
     }
   }
-
-  // Gameboards should be able to report whether or not all of their ships have been sunk.
 }
