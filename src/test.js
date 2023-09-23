@@ -2,9 +2,9 @@ import { SHIPS } from "./ship.js";
 import { GAME_BOARD } from "./gameBoard.js";
 let ship = new SHIPS();
 
-ship.hit("destroyer");
-ship.hit("destroyer");
-ship.isSunk("destroyer");
+ship.hit(ship.destroyer.type);
+ship.hit(ship.destroyer.type);
+ship.isSunk(ship.destroyer.type);
 
 test("Destroyer hit", () => {
   expect(ship.destroyer.numberOfHits).toBe(2);
@@ -30,17 +30,17 @@ const battleship = {
 battleshipBoard.placeShip(battleship, 2, 3, "horizontal");
 
 test("Attack a position on board, test-1", () => {
-  expect(battleshipBoard.attack(2, 3)).toBe("hit");
+  expect(battleshipBoard.receiveAttack(2, 3)).toBe("hit");
 });
 
 test("Attack a position on board, test-2", () => {
-  expect(battleshipBoard.attack(2, 4)).toBe("hit");
+  expect(battleshipBoard.receiveAttack(2, 4)).toBe("hit");
 });
 
 test("Attack a position on board, test-3", () => {
-  expect(battleshipBoard.attack(2, 5)).toBe("hit");
+  expect(battleshipBoard.receiveAttack(2, 5)).toBe("hit");
 });
 
 test("Attack a position on board, test-4", () => {
-  expect(battleshipBoard.attack(5, 6)).toBe("miss");
+  expect(battleshipBoard.receiveAttack(5, 6)).toBe("miss");
 });
