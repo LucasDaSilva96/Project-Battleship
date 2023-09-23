@@ -65,4 +65,6 @@ export class GAME_BOARD {
       return "You sank a ship!";
     }
   }
+
+  // Gameboards should be able to report whether or not all of their ships have been sunk.
 }
