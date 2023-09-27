@@ -1,3 +1,4 @@
+import "./style.css";
 import { GAME_BOARD } from "./gameBoard.js";
 import { SHIPS } from "./ship.js";
 
