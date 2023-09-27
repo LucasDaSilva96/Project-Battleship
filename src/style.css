@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400&family=Noto+Serif:ital,wght@0,400;0,500;0,600;1,300&display=swap");
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+.bg {
+  background-image: url("/src/imgs/Battle-game-bg.jpg");
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body {
+  font-family: "Inknut Antiqua", sans-serif;
+  position: relative;
+  max-height: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 58px;
+  font-weight: 400;
+  -webkit-text-stroke: 1px #fff;
+  letter-spacing: 35px;
+  margin-top: -20px;
+}
