@@ -203,6 +203,63 @@ h1 {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+#overlay {
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Enable scroll if needed */
+  background-color: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(20px);
+}
+
+#modal {
+  z-index: 10;
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#modal-heading {
+  font-size: 32px;
+  letter-spacing: 5px;
+  color: white;
+  -webkit-text-stroke: 0.5px #000;
+  margin-left: 0rem;
+}
+
+#play-again,
+#quit {
+  width: 10rem;
+  height: 3rem;
+  font-size: 22px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+#play-again:hover,
+#quit:hover {
+  transform: scale(1.1);
+}
+
+#quit {
+  background-color: rgba(255, 101, 101, 0.5);
+}
+
 footer {
   position: absolute;
   bottom: -20px;
