@@ -174,6 +174,35 @@ h1 {
   cursor: pointer;
 }
 
+.ingame-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+}
+
+.player-game-board,
+.ai-game-board {
+  width: 30rem;
+  height: 30rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 3px solid black;
+}
+
+.player-container-box h5,
+.ai-container-box h5 {
+  text-align: center;
+  font-size: 22px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 footer {
   position: absolute;
   bottom: -20px;
@@ -207,4 +236,18 @@ footer a svg:hover {
 /* Reusable classes */
 .hidden {
   display: none;
+}
+
+.hit {
+  background-image: url("./imgs/hit-box.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.miss {
+  background-image: url("./imgs/miss-box.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
