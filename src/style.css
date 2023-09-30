@@ -99,7 +99,8 @@ h1 {
   border: 3px solid black;
 }
 
-.cell {
+.cell,
+.ai-cell {
   width: 100%;
   height: 100%;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
@@ -292,7 +293,7 @@ footer a svg:hover {
 
 /* Reusable classes */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .hit {
@@ -307,4 +308,12 @@ footer a svg:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.selected {
+  border: 4px solid rgb(0, 37, 250);
+}
+
+.placed {
+  background-color: rgba(0, 0, 0, 0.8);
 }
