@@ -6,149 +6,151 @@
     <title>Battleship</title>
   </head>
   <body>
-    <h1>Battleship</h1>
+    <h1 id="title" hidden>Battleship</h1>
     <main>
-      <div class="play-btn-box">
+      <div class="play-btn-box hidden">
         <button id="play-btn">Play</button>
       </div>
 
       <!-- Toggle hidden  -->
-      <div class="place-ships-container hidden">
-        <div class="place-ships-heading-box">
-          <h2>Place your ships</h2>
-        </div>
+      <div class="place-ships-container">
         <!--  -->
-        <div class="place-ships-game-board">
-          <!-- Row: 1 -->
-          <div class="col">
-            <div class="cell" data-col="0" data-row="0"></div>
-            <div class="cell" data-col="0" data-row="1"></div>
-            <div class="cell" data-col="0" data-row="2"></div>
-            <div class="cell" data-col="0" data-row="3"></div>
-            <div class="cell" data-col="0" data-row="4"></div>
-            <div class="cell" data-col="0" data-row="5"></div>
-            <div class="cell" data-col="0" data-row="6"></div>
-            <div class="cell" data-col="0" data-row="7"></div>
-            <div class="cell" data-col="0" data-row="8"></div>
-            <div class="cell" data-col="0" data-row="9"></div>
+        <div class="player-container">
+          <div class="place-ships-heading-box">
+            <h2>Place your ships</h2>
           </div>
-          <!-- col: 2 -->
-          <div class="col">
-            <div class="cell" data-col="1" data-row="0"></div>
-            <div class="cell" data-col="1" data-row="1"></div>
-            <div class="cell" data-col="1" data-row="2"></div>
-            <div class="cell" data-col="1" data-row="3"></div>
-            <div class="cell" data-col="1" data-row="4"></div>
-            <div class="cell" data-col="1" data-row="5"></div>
-            <div class="cell" data-col="1" data-row="6"></div>
-            <div class="cell" data-col="1" data-row="7"></div>
-            <div class="cell" data-col="1" data-row="8"></div>
-            <div class="cell" data-col="1" data-row="9"></div>
-          </div>
-          <!-- col: 3 -->
-          <div class="col">
-            <div class="cell" data-col="2" data-row="0"></div>
-            <div class="cell" data-col="2" data-row="1"></div>
-            <div class="cell" data-col="2" data-row="2"></div>
-            <div class="cell" data-col="2" data-row="3"></div>
-            <div class="cell" data-col="2" data-row="4"></div>
-            <div class="cell" data-col="2" data-row="5"></div>
-            <div class="cell" data-col="2" data-row="6"></div>
-            <div class="cell" data-col="2" data-row="7"></div>
-            <div class="cell" data-col="2" data-row="8"></div>
-            <div class="cell" data-col="2" data-row="9"></div>
-          </div>
-          <!-- col: 4 -->
-          <div class="col">
-            <div class="cell" data-col="3" data-row="0"></div>
-            <div class="cell" data-col="3" data-row="1"></div>
-            <div class="cell" data-col="3" data-row="2"></div>
-            <div class="cell" data-col="3" data-row="3"></div>
-            <div class="cell" data-col="3" data-row="4"></div>
-            <div class="cell" data-col="3" data-row="5"></div>
-            <div class="cell" data-col="3" data-row="6"></div>
-            <div class="cell" data-col="3" data-row="7"></div>
-            <div class="cell" data-col="3" data-row="8"></div>
-            <div class="cell" data-col="3" data-row="9"></div>
-          </div>
-          <!-- col: 5 -->
-          <div class="col">
-            <div class="cell" data-col="4" data-row="0"></div>
-            <div class="cell" data-col="4" data-row="1"></div>
-            <div class="cell" data-col="4" data-row="2"></div>
-            <div class="cell" data-col="4" data-row="3"></div>
-            <div class="cell" data-col="4" data-row="4"></div>
-            <div class="cell" data-col="4" data-row="5"></div>
-            <div class="cell" data-col="4" data-row="6"></div>
-            <div class="cell" data-col="4" data-row="7"></div>
-            <div class="cell" data-col="4" data-row="8"></div>
-            <div class="cell" data-col="4" data-row="9"></div>
-          </div>
-          <!-- col: 6 -->
-          <div class="col">
-            <div class="cell" data-col="5" data-row="0"></div>
-            <div class="cell" data-col="5" data-row="1"></div>
-            <div class="cell" data-col="5" data-row="2"></div>
-            <div class="cell" data-col="5" data-row="3"></div>
-            <div class="cell" data-col="5" data-row="4"></div>
-            <div class="cell" data-col="5" data-row="5"></div>
-            <div class="cell" data-col="5" data-row="6"></div>
-            <div class="cell" data-col="5" data-row="7"></div>
-            <div class="cell" data-col="5" data-row="8"></div>
-            <div class="cell" data-col="5" data-row="9"></div>
-          </div>
-          <!-- col: 7 -->
-          <div class="col">
-            <div class="cell" data-col="6" data-row="0"></div>
-            <div class="cell" data-col="6" data-row="1"></div>
-            <div class="cell" data-col="6" data-row="2"></div>
-            <div class="cell" data-col="6" data-row="3"></div>
-            <div class="cell" data-col="6" data-row="4"></div>
-            <div class="cell" data-col="6" data-row="5"></div>
-            <div class="cell" data-col="6" data-row="6"></div>
-            <div class="cell" data-col="6" data-row="7"></div>
-            <div class="cell" data-col="6" data-row="8"></div>
-            <div class="cell" data-col="6" data-row="9"></div>
-          </div>
-          <!-- col: 8 -->
-          <div class="col">
-            <div class="cell" data-col="7" data-row="0"></div>
-            <div class="cell" data-col="7" data-row="1"></div>
-            <div class="cell" data-col="7" data-row="2"></div>
-            <div class="cell" data-col="7" data-row="3"></div>
-            <div class="cell" data-col="7" data-row="4"></div>
-            <div class="cell" data-col="7" data-row="5"></div>
-            <div class="cell" data-col="7" data-row="6"></div>
-            <div class="cell" data-col="7" data-row="7"></div>
-            <div class="cell" data-col="7" data-row="8"></div>
-            <div class="cell" data-col="7" data-row="9"></div>
-          </div>
-          <!-- col: 9 -->
-          <div class="col">
-            <div class="cell" data-col="8" data-row="0"></div>
-            <div class="cell" data-col="8" data-row="1"></div>
-            <div class="cell" data-col="8" data-row="2"></div>
-            <div class="cell" data-col="8" data-row="3"></div>
-            <div class="cell" data-col="8" data-row="4"></div>
-            <div class="cell" data-col="8" data-row="5"></div>
-            <div class="cell" data-col="8" data-row="6"></div>
-            <div class="cell" data-col="8" data-row="7"></div>
-            <div class="cell" data-col="8" data-row="8"></div>
-            <div class="cell" data-col="8" data-row="9"></div>
-            <div class="cell"></div>
-          </div>
-          <!-- col: 10 -->
-          <div class="col">
-            <div class="cell" data-col="9" data-row="0"></div>
-            <div class="cell" data-col="9" data-row="1"></div>
-            <div class="cell" data-col="9" data-row="2"></div>
-            <div class="cell" data-col="9" data-row="3"></div>
-            <div class="cell" data-col="9" data-row="4"></div>
-            <div class="cell" data-col="9" data-row="5"></div>
-            <div class="cell" data-col="9" data-row="6"></div>
-            <div class="cell" data-col="9" data-row="7"></div>
-            <div class="cell" data-col="9" data-row="8"></div>
-            <div class="cell" data-col="9" data-row="9"></div>
+          <div class="place-ships-game-board">
+            <!-- Row: 1 -->
+            <div class="col">
+              <div class="cell" data-col="0" data-row="0"></div>
+              <div class="cell" data-col="0" data-row="1"></div>
+              <div class="cell" data-col="0" data-row="2"></div>
+              <div class="cell" data-col="0" data-row="3"></div>
+              <div class="cell" data-col="0" data-row="4"></div>
+              <div class="cell" data-col="0" data-row="5"></div>
+              <div class="cell" data-col="0" data-row="6"></div>
+              <div class="cell" data-col="0" data-row="7"></div>
+              <div class="cell" data-col="0" data-row="8"></div>
+              <div class="cell" data-col="0" data-row="9"></div>
+            </div>
+            <!-- col: 2 -->
+            <div class="col">
+              <div class="cell" data-col="1" data-row="0"></div>
+              <div class="cell" data-col="1" data-row="1"></div>
+              <div class="cell" data-col="1" data-row="2"></div>
+              <div class="cell" data-col="1" data-row="3"></div>
+              <div class="cell" data-col="1" data-row="4"></div>
+              <div class="cell" data-col="1" data-row="5"></div>
+              <div class="cell" data-col="1" data-row="6"></div>
+              <div class="cell" data-col="1" data-row="7"></div>
+              <div class="cell" data-col="1" data-row="8"></div>
+              <div class="cell" data-col="1" data-row="9"></div>
+            </div>
+            <!-- col: 3 -->
+            <div class="col">
+              <div class="cell" data-col="2" data-row="0"></div>
+              <div class="cell" data-col="2" data-row="1"></div>
+              <div class="cell" data-col="2" data-row="2"></div>
+              <div class="cell" data-col="2" data-row="3"></div>
+              <div class="cell" data-col="2" data-row="4"></div>
+              <div class="cell" data-col="2" data-row="5"></div>
+              <div class="cell" data-col="2" data-row="6"></div>
+              <div class="cell" data-col="2" data-row="7"></div>
+              <div class="cell" data-col="2" data-row="8"></div>
+              <div class="cell" data-col="2" data-row="9"></div>
+            </div>
+            <!-- col: 4 -->
+            <div class="col">
+              <div class="cell" data-col="3" data-row="0"></div>
+              <div class="cell" data-col="3" data-row="1"></div>
+              <div class="cell" data-col="3" data-row="2"></div>
+              <div class="cell" data-col="3" data-row="3"></div>
+              <div class="cell" data-col="3" data-row="4"></div>
+              <div class="cell" data-col="3" data-row="5"></div>
+              <div class="cell" data-col="3" data-row="6"></div>
+              <div class="cell" data-col="3" data-row="7"></div>
+              <div class="cell" data-col="3" data-row="8"></div>
+              <div class="cell" data-col="3" data-row="9"></div>
+            </div>
+            <!-- col: 5 -->
+            <div class="col">
+              <div class="cell" data-col="4" data-row="0"></div>
+              <div class="cell" data-col="4" data-row="1"></div>
+              <div class="cell" data-col="4" data-row="2"></div>
+              <div class="cell" data-col="4" data-row="3"></div>
+              <div class="cell" data-col="4" data-row="4"></div>
+              <div class="cell" data-col="4" data-row="5"></div>
+              <div class="cell" data-col="4" data-row="6"></div>
+              <div class="cell" data-col="4" data-row="7"></div>
+              <div class="cell" data-col="4" data-row="8"></div>
+              <div class="cell" data-col="4" data-row="9"></div>
+            </div>
+            <!-- col: 6 -->
+            <div class="col">
+              <div class="cell" data-col="5" data-row="0"></div>
+              <div class="cell" data-col="5" data-row="1"></div>
+              <div class="cell" data-col="5" data-row="2"></div>
+              <div class="cell" data-col="5" data-row="3"></div>
+              <div class="cell" data-col="5" data-row="4"></div>
+              <div class="cell" data-col="5" data-row="5"></div>
+              <div class="cell" data-col="5" data-row="6"></div>
+              <div class="cell" data-col="5" data-row="7"></div>
+              <div class="cell" data-col="5" data-row="8"></div>
+              <div class="cell" data-col="5" data-row="9"></div>
+            </div>
+            <!-- col: 7 -->
+            <div class="col">
+              <div class="cell" data-col="6" data-row="0"></div>
+              <div class="cell" data-col="6" data-row="1"></div>
+              <div class="cell" data-col="6" data-row="2"></div>
+              <div class="cell" data-col="6" data-row="3"></div>
+              <div class="cell" data-col="6" data-row="4"></div>
+              <div class="cell" data-col="6" data-row="5"></div>
+              <div class="cell" data-col="6" data-row="6"></div>
+              <div class="cell" data-col="6" data-row="7"></div>
+              <div class="cell" data-col="6" data-row="8"></div>
+              <div class="cell" data-col="6" data-row="9"></div>
+            </div>
+            <!-- col: 8 -->
+            <div class="col">
+              <div class="cell" data-col="7" data-row="0"></div>
+              <div class="cell" data-col="7" data-row="1"></div>
+              <div class="cell" data-col="7" data-row="2"></div>
+              <div class="cell" data-col="7" data-row="3"></div>
+              <div class="cell" data-col="7" data-row="4"></div>
+              <div class="cell" data-col="7" data-row="5"></div>
+              <div class="cell" data-col="7" data-row="6"></div>
+              <div class="cell" data-col="7" data-row="7"></div>
+              <div class="cell" data-col="7" data-row="8"></div>
+              <div class="cell" data-col="7" data-row="9"></div>
+            </div>
+            <!-- col: 9 -->
+            <div class="col">
+              <div class="cell" data-col="8" data-row="0"></div>
+              <div class="cell" data-col="8" data-row="1"></div>
+              <div class="cell" data-col="8" data-row="2"></div>
+              <div class="cell" data-col="8" data-row="3"></div>
+              <div class="cell" data-col="8" data-row="4"></div>
+              <div class="cell" data-col="8" data-row="5"></div>
+              <div class="cell" data-col="8" data-row="6"></div>
+              <div class="cell" data-col="8" data-row="7"></div>
+              <div class="cell" data-col="8" data-row="8"></div>
+              <div class="cell" data-col="8" data-row="9"></div>
+            </div>
+            <!-- col: 10 -->
+            <div class="col">
+              <div class="cell" data-col="9" data-row="0"></div>
+              <div class="cell" data-col="9" data-row="1"></div>
+              <div class="cell" data-col="9" data-row="2"></div>
+              <div class="cell" data-col="9" data-row="3"></div>
+              <div class="cell" data-col="9" data-row="4"></div>
+              <div class="cell" data-col="9" data-row="5"></div>
+              <div class="cell" data-col="9" data-row="6"></div>
+              <div class="cell" data-col="9" data-row="7"></div>
+              <div class="cell" data-col="9" data-row="8"></div>
+              <div class="cell" data-col="9" data-row="9"></div>
+            </div>
+            <!--  -->
           </div>
           <!--  -->
         </div>
@@ -156,14 +158,15 @@
         <div class="ships-to-place-container">
           <div class="ship-box">
             <h4>Cruiser</h4>
-            <div class="ship-img-box" id="cruiser" data-isempty="false">
+            <div class="ship-img-box" id="cruiser">
               <img src="./src/imgs/cruiser.jpg" alt="picture of the cruiser" />
             </div>
           </div>
+          <div class="cruiser-preview cruiser ship" draggable="true"></div>
           <!--  -->
           <div class="ship-box">
             <h4>Battleship</h4>
-            <div class="ship-img-box" id="battleship" data-isempty="false">
+            <div class="ship-img-box" id="battleship">
               <img
                 src="./src/imgs/carrier.jpg"
                 alt="picture of the battleship"
@@ -173,7 +176,7 @@
           <!--  -->
           <div class="ship-box">
             <h4>Submarine</h4>
-            <div class="ship-img-box" id="submarine" data-isempty="false">
+            <div class="ship-img-box" id="submarine">
               <img
                 src="./src/imgs/submarine.jpg"
                 alt="picture of the submarine"
@@ -183,7 +186,7 @@
           <!--  -->
           <div class="ship-box">
             <h4>Destroyer</h4>
-            <div class="ship-img-box" id="destroyer" data-isempty="false">
+            <div class="ship-img-box" id="destroyer">
               <img
                 src="./src/imgs/destroyer.jpg"
                 alt="picture of the destroyer"
@@ -193,30 +196,30 @@
           <!--  -->
           <div class="ship-box">
             <h4>Carrier</h4>
-            <div class="ship-img-box" id="carrier" data-isempty="false">
+            <div class="ship-img-box" id="carrier">
               <img
                 src="./src/imgs/aircraft-carrier.jpg"
                 alt="picture of the carrier"
               />
             </div>
           </div>
+          <div
+            class="battleship-preview battleship ship"
+            draggable="true"
+          ></div>
+          <div class="submarine-preview submarine ship" draggable="true"></div>
+          <div class="destroyer-preview destroyer ship" draggable="true"></div>
+          <div class="carrier-preview carrier ship" draggable="true"></div>
           <!--  -->
         </div>
         <!--  -->
         <div class="orientation-container">
-          <div class="orientation-heading-box">
-            <h3>Orientation</h3>
-          </div>
-          <div class="orientation-btns-box">
-            <div class="vertical-btn-box">
-              <button id="vertical-btn">↓↑</button>
-            </div>
-            <div class="horizontal-btn-box">
-              <button id="horizontal-btn">← →</button>
-            </div>
-          </div>
+          <button id="flip">Flip</button>
         </div>
         <!--  -->
+        <div class="ready-to-play-container">
+          <button id="ready">Done</button>
+        </div>
       </div>
 
       <!-- Toggle hidden  -->
@@ -224,136 +227,7 @@
         <div class="player-container-box">
           <h5>You</h5>
           <div class="player-game-board">
-            <!-- Row: 1 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 2 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 3 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 4 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 5 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 6 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 7 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 8 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 9 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
-            <!-- col: 10 -->
-            <div class="col">
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-              <div class="cell"></div>
-            </div>
+            <!-- **** JS **** -->
           </div>
         </div>
         <!-- **** -->
@@ -362,134 +236,135 @@
           <div class="ai-game-board">
             <!-- Row: 1 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="0" data-row="0"></div>
+              <div class="ai-cell" data-col="0" data-row="1"></div>
+              <div class="ai-cell" data-col="0" data-row="2"></div>
+              <div class="ai-cell" data-col="0" data-row="3"></div>
+              <div class="ai-cell" data-col="0" data-row="4"></div>
+              <div class="ai-cell" data-col="0" data-row="5"></div>
+              <div class="ai-cell" data-col="0" data-row="6"></div>
+              <div class="ai-cell" data-col="0" data-row="7"></div>
+              <div class="ai-cell" data-col="0" data-row="8"></div>
+              <div class="ai-cell" data-col="0" data-row="9"></div>
             </div>
             <!-- col: 2 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="1" data-row="0"></div>
+              <div class="ai-cell" data-col="1" data-row="1"></div>
+              <div class="ai-cell" data-col="1" data-row="2"></div>
+              <div class="ai-cell" data-col="1" data-row="3"></div>
+              <div class="ai-cell" data-col="1" data-row="4"></div>
+              <div class="ai-cell" data-col="1" data-row="5"></div>
+              <div class="ai-cell" data-col="1" data-row="6"></div>
+              <div class="ai-cell" data-col="1" data-row="7"></div>
+              <div class="ai-cell" data-col="1" data-row="8"></div>
+              <div class="ai-cell" data-col="1" data-row="9"></div>
             </div>
             <!-- col: 3 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="2" data-row="0"></div>
+              <div class="ai-cell" data-col="2" data-row="1"></div>
+              <div class="ai-cell" data-col="2" data-row="2"></div>
+              <div class="ai-cell" data-col="2" data-row="3"></div>
+              <div class="ai-cell" data-col="2" data-row="4"></div>
+              <div class="ai-cell" data-col="2" data-row="5"></div>
+              <div class="ai-cell" data-col="2" data-row="6"></div>
+              <div class="ai-cell" data-col="2" data-row="7"></div>
+              <div class="ai-cell" data-col="2" data-row="8"></div>
+              <div class="ai-cell" data-col="2" data-row="9"></div>
             </div>
             <!-- col: 4 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="3" data-row="0"></div>
+              <div class="ai-cell" data-col="3" data-row="1"></div>
+              <div class="ai-cell" data-col="3" data-row="2"></div>
+              <div class="ai-cell" data-col="3" data-row="3"></div>
+              <div class="ai-cell" data-col="3" data-row="4"></div>
+              <div class="ai-cell" data-col="3" data-row="5"></div>
+              <div class="ai-cell" data-col="3" data-row="6"></div>
+              <div class="ai-cell" data-col="3" data-row="7"></div>
+              <div class="ai-cell" data-col="3" data-row="8"></div>
+              <div class="ai-cell" data-col="3" data-row="9"></div>
             </div>
             <!-- col: 5 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="4" data-row="0"></div>
+              <div class="ai-cell" data-col="4" data-row="1"></div>
+              <div class="ai-cell" data-col="4" data-row="2"></div>
+              <div class="ai-cell" data-col="4" data-row="3"></div>
+              <div class="ai-cell" data-col="4" data-row="4"></div>
+              <div class="ai-cell" data-col="4" data-row="5"></div>
+              <div class="ai-cell" data-col="4" data-row="6"></div>
+              <div class="ai-cell" data-col="4" data-row="7"></div>
+              <div class="ai-cell" data-col="4" data-row="8"></div>
+              <div class="ai-cell" data-col="4" data-row="9"></div>
             </div>
             <!-- col: 6 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="5" data-row="0"></div>
+              <div class="ai-cell" data-col="5" data-row="1"></div>
+              <div class="ai-cell" data-col="5" data-row="2"></div>
+              <div class="ai-cell" data-col="5" data-row="3"></div>
+              <div class="ai-cell" data-col="5" data-row="4"></div>
+              <div class="ai-cell" data-col="5" data-row="5"></div>
+              <div class="ai-cell" data-col="5" data-row="6"></div>
+              <div class="ai-cell" data-col="5" data-row="7"></div>
+              <div class="ai-cell" data-col="5" data-row="8"></div>
+              <div class="ai-cell" data-col="5" data-row="9"></div>
             </div>
             <!-- col: 7 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="6" data-row="0"></div>
+              <div class="ai-cell" data-col="6" data-row="1"></div>
+              <div class="ai-cell" data-col="6" data-row="2"></div>
+              <div class="ai-cell" data-col="6" data-row="3"></div>
+              <div class="ai-cell" data-col="6" data-row="4"></div>
+              <div class="ai-cell" data-col="6" data-row="5"></div>
+              <div class="ai-cell" data-col="6" data-row="6"></div>
+              <div class="ai-cell" data-col="6" data-row="7"></div>
+              <div class="ai-cell" data-col="6" data-row="8"></div>
+              <div class="ai-cell" data-col="6" data-row="9"></div>
             </div>
             <!-- col: 8 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="7" data-row="0"></div>
+              <div class="ai-cell" data-col="7" data-row="1"></div>
+              <div class="ai-cell" data-col="7" data-row="2"></div>
+              <div class="ai-cell" data-col="7" data-row="3"></div>
+              <div class="ai-cell" data-col="7" data-row="4"></div>
+              <div class="ai-cell" data-col="7" data-row="5"></div>
+              <div class="ai-cell" data-col="7" data-row="6"></div>
+              <div class="ai-cell" data-col="7" data-row="7"></div>
+              <div class="ai-cell" data-col="7" data-row="8"></div>
+              <div class="ai-cell" data-col="7" data-row="9"></div>
             </div>
             <!-- col: 9 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="8" data-row="0"></div>
+              <div class="ai-cell" data-col="8" data-row="1"></div>
+              <div class="ai-cell" data-col="8" data-row="2"></div>
+              <div class="ai-cell" data-col="8" data-row="3"></div>
+              <div class="ai-cell" data-col="8" data-row="4"></div>
+              <div class="ai-cell" data-col="8" data-row="5"></div>
+              <div class="ai-cell" data-col="8" data-row="6"></div>
+              <div class="ai-cell" data-col="8" data-row="7"></div>
+              <div class="ai-cell" data-col="8" data-row="8"></div>
+              <div class="ai-cell" data-col="8" data-row="9"></div>
             </div>
             <!-- col: 10 -->
             <div class="col">
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
-              <div class="ai-cell"></div>
+              <div class="ai-cell" data-col="9" data-row="0"></div>
+              <div class="ai-cell" data-col="9" data-row="1"></div>
+              <div class="ai-cell" data-col="9" data-row="2"></div>
+              <div class="ai-cell" data-col="9" data-row="3"></div>
+              <div class="ai-cell" data-col="9" data-row="4"></div>
+              <div class="ai-cell" data-col="9" data-row="5"></div>
+              <div class="ai-cell" data-col="9" data-row="6"></div>
+              <div class="ai-cell" data-col="9" data-row="7"></div>
+              <div class="ai-cell" data-col="9" data-row="8"></div>
+              <div class="ai-cell" data-col="9" data-row="9"></div>
             </div>
+            <!--  -->
           </div>
         </div>
       </div>
@@ -512,7 +387,7 @@
       <!--  -->
     </main>
     <!-- prettier-ignore -->
-    <footer>
+    <footer class="hidden">
       <p>Lucas Da Silva</p>
       <a href="https://github.com/LucasDaSilva96"
         ><svg

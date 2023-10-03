@@ -59,44 +59,97 @@ h1 {
 }
 
 .place-ships-container {
+  padding: 50px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
-  margin-top: -20px;
   display: grid;
-  grid-template-columns: 0.5fr 0.2fr 0.2fr;
-  grid-template-rows: 0.2fr 2fr;
-  align-items: center;
-  justify-items: center;
-  column-gap: 4rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr;
 }
 
 .place-ships-heading-box {
-  grid-column: 1 / 4;
-  margin-left: 10rem;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
-  margin-bottom: 8px;
   border: 4px solid black;
+  width: 60%;
+  align-self: center;
+  justify-self: center;
 }
 
 .place-ships-heading-box h2 {
-  font-size: 20px;
+  font-size: 14px;
   color: white;
   letter-spacing: 20px;
-  padding-left: 10px;
+}
+
+.player-container {
+  align-self: center;
+  grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr;
+  row-gap: 10px;
 }
 
 .place-ships-game-board {
-  grid-row: 2 / 3;
-  width: 30rem;
-  height: 30rem;
+  align-self: center;
+  justify-self: center;
+  width: 25.1rem;
+  height: 25.1rem;
   background-color: rgba(255, 255, 255, 0.7);
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 2.5rem);
+  grid-template-rows: repeat(10, 2.5rem);
   border: 3px solid black;
+}
+
+.orientation-container {
+  grid-column: 2 / 3;
+  justify-self: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#flip {
+  width: 90%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  background-color: #030303;
+  font-size: 18px;
+  color: white;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+#flip:hover {
+  background-color: transparent;
+  border: 2px solid black;
+}
+
+.ready-to-play-container {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ready {
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid black;
+  transition: all 0.3s ease-in;
+}
+
+#ready:hover {
+  background-color: transparent;
+  color: whitesmoke;
+  border: 2px solid black;
 }
 
 .cell,
@@ -107,25 +160,55 @@ h1 {
 }
 
 .ships-to-place-container {
-  grid-row: 2 / 3;
-  grid-column: 3 / 4;
-  width: 20rem;
-  height: 30rem;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.orientation-container {
-  margin-top: 5rem;
-  grid-row: 2 / 3;
+  grid-row: 1 / 2;
   grid-column: 2 / 3;
-}
-
-.ships-to-place-container {
+  background-color: rgba(255, 255, 255, 0.7);
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: 0.2fr 0.5fr;
+  grid-template-columns: repeat(5, 0.5fr);
   align-items: center;
   justify-items: center;
   border: 3px solid black;
+  column-gap: 10px;
+  padding: 5px;
+  place-content: center;
+}
+
+.carrier-preview {
+  width: 12.5rem;
+  height: 2.5rem;
+  background-color: #b95252;
+  cursor: pointer;
+}
+
+.battleship-preview {
+  width: 10rem;
+  height: 2.5rem;
+  background-color: #b60808;
+  cursor: pointer;
+}
+
+.cruiser-preview {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #07ad60;
+  cursor: pointer;
+}
+
+.submarine-preview {
+  width: 7.5rem;
+  height: 2.5rem;
+  background-color: #0a1f96;
+  cursor: pointer;
+}
+
+.destroyer-preview {
+  width: 5rem;
+  height: 2.5rem;
+  background-color: #ffd900;
+  cursor: pointer;
 }
 
 .ship-box h4 {
@@ -134,45 +217,13 @@ h1 {
 
 .ship-img-box {
   border: 2px solid black;
-  width: 8rem;
-  height: 3rem;
+  width: 6rem;
+  height: 1.8rem;
 }
 
 .ship-img-box img {
   width: 100%;
   height: 100%;
-}
-
-.orientation-container {
-  align-self: start;
-  margin-top: 2rem;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  place-content: center;
-  row-gap: 1.5rem;
-}
-
-.orientation-heading-box h3 {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.orientation-btns-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-#vertical-btn,
-#horizontal-btn {
-  width: 5rem;
-  height: 2.5rem;
-  font-size: 22px;
-  border: 4px solid black;
-  background-color: #fff;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .ingame-container {
@@ -185,7 +236,6 @@ h1 {
   column-gap: 60px;
 }
 
-.player-game-board,
 .ai-game-board {
   width: 30rem;
   height: 30rem;
@@ -194,14 +244,6 @@ h1 {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
   border: 3px solid black;
-}
-
-.player-container-box h5,
-.ai-container-box h5 {
-  text-align: center;
-  font-size: 22px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 #overlay {
@@ -308,10 +350,6 @@ footer a svg:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.selected {
-  border: 4px solid rgb(0, 37, 250);
 }
 
 .placed {

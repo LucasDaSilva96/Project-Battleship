@@ -1,6 +1,7 @@
 const play_button = document.getElementById("play-btn");
 const place_ships_section = document.querySelector(".place-ships-container");
 const play_button_box = document.querySelector(".play-btn-box");
+const title = document.getElementById("title");
 
 // This is for rendering the place ships section
 export function renderPlaceShipsSection() {
@@ -11,4 +12,16 @@ export function renderPlaceShipsSection() {
 function play_event() {
   place_ships_section.classList.toggle("hidden");
   play_button_box.classList.toggle("hidden");
+  title.classList.toggle("hidden");
+}
+
+const ships_draggable = document.querySelectorAll(".ship");
+
+let angle = 0;
+export function flip() {
+  angle = angle === 0 ? 90 : 0;
+
+  ships_draggable.forEach(
+    (ship) => (ship.style.transform = `rotate(${angle}deg)`)
+  );
 }
