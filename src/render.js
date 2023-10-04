@@ -17,11 +17,20 @@ function play_event() {
 
 const ships_draggable = document.querySelectorAll(".ship");
 
-let angle = 0;
+export let angle = 0;
 export function flip() {
   angle = angle === 0 ? 90 : 0;
 
   ships_draggable.forEach(
     (ship) => (ship.style.transform = `rotate(${angle}deg)`)
   );
+}
+
+export function renderPlaySection() {
+  const ships_container = document.querySelector(".ships-container");
+  const ai_board_container = document.querySelector(
+    ".place-ships-Ai-game-board"
+  );
+  ships_container.classList.add("hidden");
+  ai_board_container.classList.remove("hidden");
 }

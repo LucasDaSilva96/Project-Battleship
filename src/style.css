@@ -28,6 +28,14 @@ h1 {
   margin-left: 6rem;
 }
 
+:root {
+  --carrier-color: #b95252;
+  --battleship-color: #b60808;
+  --cruiser-color: #07ad60;
+  --submarine-color: #0a1f96;
+  --destroyer-color: #ffd900;
+}
+
 .play-btn-box {
   position: absolute;
   top: 50%;
@@ -66,11 +74,25 @@ h1 {
   grid-template-rows: 0.5fr;
 }
 
+.ships-container {
+  border: 3px solid black;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  grid-template-rows: 0.5fr 1fr 0.5fr;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 10px;
+  padding: 5px;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+}
+
 .place-ships-heading-box {
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
   border: 4px solid black;
-  width: 60%;
   align-self: center;
   justify-self: center;
 }
@@ -82,14 +104,19 @@ h1 {
 }
 
 .player-container {
-  align-self: center;
-  grid-row: 1 / 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: grid;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 0.2fr 1fr;
-  row-gap: 10px;
+  column-gap: 80px;
+  row-gap: 30px;
 }
 
 .place-ships-game-board {
+  grid-row: 2 / 3;
   align-self: center;
   justify-self: center;
   width: 25.1rem;
@@ -102,7 +129,8 @@ h1 {
 }
 
 .orientation-container {
-  grid-column: 2 / 3;
+  grid-column: 3 / 6;
+  grid-row: 3 / 4;
   justify-self: center;
   width: 100%;
   display: flex;
@@ -128,8 +156,8 @@ h1 {
 }
 
 .ready-to-play-container {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
   width: 100%;
   display: flex;
   align-items: center;
@@ -154,38 +182,35 @@ h1 {
 
 .cell,
 .ai-cell {
-  width: 100%;
-  height: 100%;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
 }
 
 .ships-to-place-container {
-  grid-row: 1 / 2;
+  grid-row: 2 / 3;
   grid-column: 2 / 3;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  grid-template-rows: 0.2fr 0.5fr;
-  grid-template-columns: repeat(5, 0.5fr);
-  align-items: center;
-  justify-items: center;
-  border: 3px solid black;
-  column-gap: 10px;
-  padding: 5px;
-  place-content: center;
 }
 
 .carrier-preview {
   width: 12.5rem;
   height: 2.5rem;
-  background-color: #b95252;
+  background-color: var(--carrier-color);
   cursor: pointer;
+}
+.carrier {
+  background-color: var(--carrier-color);
 }
 
 .battleship-preview {
   width: 10rem;
   height: 2.5rem;
-  background-color: #b60808;
+  background-color: var(--battleship-color);
   cursor: pointer;
+}
+
+.battleship {
+  background-color: var(--battleship-color);
 }
 
 .cruiser-preview {
@@ -193,22 +218,34 @@ h1 {
   grid-column: 1 / 2;
   width: 7.5rem;
   height: 2.5rem;
-  background-color: #07ad60;
+  background-color: var(--cruiser-color);
   cursor: pointer;
+}
+
+.cruiser {
+  background-color: var(--cruiser-color);
 }
 
 .submarine-preview {
   width: 7.5rem;
   height: 2.5rem;
-  background-color: #0a1f96;
+  background-color: var(--submarine-color);
   cursor: pointer;
+}
+
+.submarine {
+  background-color: var(--submarine-color);
 }
 
 .destroyer-preview {
   width: 5rem;
   height: 2.5rem;
-  background-color: #ffd900;
+  background-color: var(--destroyer-color);
   cursor: pointer;
+}
+
+.destroyer {
+  background-color: var(--destroyer-color);
 }
 
 .ship-box h4 {
@@ -216,33 +253,25 @@ h1 {
 }
 
 .ship-img-box {
-  border: 2px solid black;
   width: 6rem;
   height: 1.8rem;
 }
 
 .ship-img-box img {
+  border: 2px solid black;
   width: 100%;
   height: 100%;
 }
 
-.ingame-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -40%);
+.place-ships-Ai-game-board {
+  align-self: center;
+  justify-self: center;
+  width: 25.1rem;
+  height: 25.1rem;
+  background-color: rgba(231, 146, 146, 0.7);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 60px;
-}
-
-.ai-game-board {
-  width: 30rem;
-  height: 30rem;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 2.5rem);
+  grid-template-rows: repeat(10, 2.5rem);
   border: 3px solid black;
 }
 
@@ -354,4 +383,8 @@ footer a svg:hover {
 
 .placed {
   background-color: rgba(0, 0, 0, 0.8);
+}
+
+.blur {
+  filter: blur(10px);
 }
