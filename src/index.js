@@ -1,29 +1,15 @@
 import "./style.css";
-import { renderPlaceShipsSection } from "./render.js";
-import { flip, renderPlaySection } from "./render.js";
-import { createGameBoard, createGameBoardAI } from "./gameBoard.js";
-import { addShipPiece, dragShipToPlace, dragOver, dropShip } from "./player.js";
-import { SHIPS } from "./ship.js";
+import { renderPlaceShipsSection, flip, renderPlaySection } from "./render.js";
+import { dragShipToPlace, dragOver, dropShip, hit } from "./player.js";
 renderPlaceShipsSection();
+
+window.addEventListener("DOMContentLoaded", fixID);
 
 const flip_btn = document.getElementById("flip");
 flip_btn.addEventListener("click", flip);
 
 const ready_btn = document.getElementById("ready");
 ready_btn.addEventListener("click", renderPlaySection);
-
-const PLAYER_BOARD = createGameBoard();
-const AI_BOARD = createGameBoardAI();
-
-const carrier = new SHIPS("carrier", 5);
-const battleship = new SHIPS("battleship", 4);
-const cruiser = new SHIPS("cruiser", 3);
-const submarine = new SHIPS("submarine", 3);
-const destroyer = new SHIPS("destroyer", 2);
-
-const ships = [carrier, battleship, cruiser, submarine, destroyer];
-
-ships.forEach((ship) => addShipPiece("computer", ship));
 
 const ships_element = Array.from(document.querySelectorAll(".ship"));
 ships_element.forEach((ship) =>
@@ -35,3 +21,25 @@ playerBlocks.forEach((playerBlock) => {
   playerBlock.addEventListener("dragover", dragOver);
   playerBlock.addEventListener("drop", dropShip);
 });
+
+const ai_cells = document.querySelectorAll(".ai-cell");
+ai_cells.forEach((el) => {
+  el.addEventListener("click", hit);
+});
+
+function fixID() {
+  const player_cells = document.querySelectorAll(".cell");
+  const ai_cells = document.querySelectorAll(".ai-cell");
+
+  let player_id = 0;
+  let ai_id = 0;
+  player_cells.forEach((cell) => {
+    player_id++;
+    cell.id = player_id;
+  });
+
+  ai_cells.forEach((cell) => {
+    ai_id++;
+    cell.id = ai_id;
+  });
+}
