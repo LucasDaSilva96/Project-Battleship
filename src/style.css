@@ -29,11 +29,11 @@ h1 {
 }
 
 :root {
-  --carrier-color: #b95252;
-  --battleship-color: #b60808;
-  --cruiser-color: #07ad60;
-  --submarine-color: #0a1f96;
-  --destroyer-color: #ffd900;
+  --carrier-color: rgba(7, 7, 7, 0.5);
+  --battleship-color: #666666;
+  --cruiser-color: #4d4d4d;
+  --submarine-color: #333333;
+  --destroyer-color: #1a1a1ad2;
 }
 
 .play-btn-box {
@@ -186,6 +186,7 @@ h1 {
   width: 2.5rem;
   height: 2.5rem;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .ships-to-place-container {
@@ -201,6 +202,7 @@ h1 {
 }
 .carrier {
   background-color: var(--carrier-color);
+  text-align: center;
 }
 
 .battleship-preview {
@@ -212,6 +214,7 @@ h1 {
 
 .battleship {
   background-color: var(--battleship-color);
+  text-align: center;
 }
 
 .cruiser-preview {
@@ -225,6 +228,7 @@ h1 {
 
 .cruiser {
   background-color: var(--cruiser-color);
+  text-align: center;
 }
 
 .submarine-preview {
@@ -236,6 +240,7 @@ h1 {
 
 .submarine {
   background-color: var(--submarine-color);
+  text-align: center;
 }
 
 .destroyer-preview {
@@ -247,6 +252,7 @@ h1 {
 
 .destroyer {
   background-color: var(--destroyer-color);
+  text-align: center;
 }
 
 .ship-box h4 {
@@ -324,6 +330,13 @@ h1 {
   transition: all 0.3s ease;
 }
 
+.quit-box {
+  float: right;
+  top: 0px;
+  margin-right: 0px;
+  padding: 10px;
+}
+
 #play-again:hover,
 #quit:hover {
   transform: scale(1.1);
@@ -335,7 +348,7 @@ h1 {
 
 footer {
   position: absolute;
-  bottom: -20px;
+  bottom: 0px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -388,4 +401,19 @@ footer a svg:hover {
 
 .blur {
   filter: blur(10px);
+}
+
+.hitMsgBox {
+  background-image: radial-gradient(
+    circle,
+    #ff0505,
+    #f35d00,
+    #e48500,
+    #d4a300,
+    #c5bd2f
+  );
+}
+
+.transparent {
+  background-color: transparent;
 }
