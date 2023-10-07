@@ -142,8 +142,6 @@ export function dropShip(e) {
 
 // Function to handle player's attack
 export function hit(e) {
-  console.log("PLAYER-ARRAY: ", PLAYER_SHIPS);
-  console.log("AI-ARRAY: ", AI_SHIPS);
   const playerCells = document.querySelectorAll(".cell");
   const msgBox = document.getElementById("message-box");
   let shipName = undefined;
