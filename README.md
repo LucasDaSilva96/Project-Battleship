@@ -1,5 +1,8 @@
 # Project-Battleship
-This is the Battleship assignment from The Odin Project
+This is my version of the Battleship assignment from The Odin Project.
+
+## Live-code:
+https://lucasdasilva96.github.io/Project-Battleship/dist/index.html
 
 ### Assignment
 1. Begin your app by creating the Ship class/factory (your choice).
